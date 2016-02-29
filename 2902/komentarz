@@ -1,0 +1,14 @@
+Literatura:
+"Thinking in C++"- Bruce Eckel
+"Algorytmy i struktury danych"- Alzo, Ullman,Hoporoft
+"Projektowanie i analiza algorytmów" - -...-
+"Wprowadzenie do algorytmów"- Cormen
+**"Wzorce projektowe..."-Gamm et al. 
+
+29.02 Notatki Pamsi
+
+zad.1 Stwórz klasę pozwalającą na przechowywanie dowolnej ilości elementów typu int w tablicy.
+
+zad.2 Wykonaj pomiary czasów zapisu do obiektu klasy z zad pierwszego. Dla ilości elementów n=10^1, 10^3, 10^5, 10^6, 10^9.
+komentarz: Pomiary tego czasu będziemy wykonywać do każdego zadania. Pomiary czasu mamy robić z jak najwieksza dokladnoscia[milisekundy]. 
+
