@@ -1,4 +1,3 @@
-
 #include <cstdlib>
 #include <iostream>
 #include <string>
@@ -9,42 +8,55 @@ using namespace std;
 
 class Tablica {
 private:
-    int *tablica;
-
+    int *tablica; //tablica
+    int *tablica2; //potrzebna do przepisania danych ze starej do nowej tablicy
+    int rozmiar;
 public:
-    int dodajElementy(int n){
-        tablica= new int [n];{
-        for (int i=0;i<n;i++);
-        tablica[n]=rand();
+    int dodajElementy(int ile){  //funkcja zwiekszajaca ilosc elementow i wypelniajaca tablice
+        tablica= new int [ile];
+        for (int i=0;i<ile;i++)
+        tablica[i]=0;
 
-    }
- }
-    void zwolnijPamiec(){
+
+        tablica2= new int[rozmiar];
+        for (int i=0; i<rozmiar;i++)
+        tablica2[i]=0;
+        return 0;}
+
+
+
+    void zwolnijPamiec(){ //zwolnienie pamieci
         delete [] tablica;
+        delete [] tablica2;
         }
 
 };
 
-clock_t start, stop;
-double czas;
+
 
 int main()
 {
-/*
-n[5]={10^1,10^3,10^5,10^6,10^9};
-*/
-start=clock();
-for (int i=0;i<5;i++);
+
+clock_t start, stop; //zmienne potrzebne do licznei aczasu
+double czas;
+
+
 Tablica tablica;
+Tablica tablica2;
 int ile;
+int rozmiar;
 cout<<"Podaj ile elementow wczytac"<<endl;
 cin>>ile;
+start=clock(); //czas poczatkowy
 tablica.dodajElementy(ile);
-tablica.zwolnijPamiec();
+tablica2.dodajElementy(rozmiar);
+stop=clock(); //czas koncowy
+tablica2.zwolnijPamiec();
 
-stop=clock();
-czas= (double)(stop-start);
-cout<<"Czas zapisu(przy zwiekszaniu o jeden) :"<<czas<<endl;
+
+czas= (double)(stop-start)/CLOCKS_PER_SEC; //roznica koncowego czasu od czasu poczatkowego.
+cout<<"Czas zapisu(przy zwiekszaniu razy dwa) :"<<czas<<"[ms]"<<endl;
+cout<<"rozmiar:"<<rozmiar;
 return 0;
 
 }
