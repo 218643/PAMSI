@@ -28,8 +28,8 @@ public:
 	delete [] tablica;
 	tablica=new int[licznik+1];
 	for (int i=0; i<licznik; i++) {
-	tablica[i]=tablicapomocnicza[i];
-	}
+	tablica[i]=tablicapomocnicza[i];}
+	licznik++;
      }
     }
 
