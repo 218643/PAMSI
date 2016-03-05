@@ -14,7 +14,7 @@ public:
     int dodajElementy(int ile){  //funkcja zwiekszajaca ilosc elementow i wypelniajaca tablice
         tablica= new int [ile];
         for (int i=0;i<ile;i++)
-        tablica[i]=rand();
+        tablica[i]=0; //wypelnienie nowej tablicy zerami
         return 0;
     }
 
@@ -23,6 +23,7 @@ public:
         }
 
 };
+
 
 
 
@@ -43,7 +44,7 @@ tablica.dodajElementy(ile);
 stop=clock(); //czas koncowy
 tablica.zwolnijPamiec();
 
-czas= (double)(stop-start) /CLOCKS_PER_SEC; //roznica koncowego czasu od czasu poczatkowego.
+czas= (double)(stop-start) /CLOCKS_PER_SEC; //roznica koncowego czasu od czasu poczatkowego w sekundach
 cout<<"Czas zwiekszania tablicy: "<<czas<<"[s]"<<endl;
 return 0;
 
