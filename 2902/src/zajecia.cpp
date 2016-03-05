@@ -11,38 +11,40 @@ private:
     int *tablica; //tablica
 
 public:
-    int dodajElementy(int n){  //funkcja zwiekszajaca ilosc elementow i wypelniajaca tablice
-        tablica= new int [n];{
-        for (int i=0;i<n;i++);
-        tablica[n]=rand();
+    int dodajElementy(int ile){  //funkcja zwiekszajaca ilosc elementow i wypelniajaca tablice
+        tablica= new int [ile];
+        for (int i=0;i<ile;i++)
+        tablica[i]=rand();
+        return 0;
     }
- }
+
     void zwolnijPamiec(){ //zwolnienie pamieci
         delete [] tablica;
         }
 
 };
 
-clock_t start, stop; //zmienne potrzebne do licznei aczasu
-double czas;
+
 
 int main()
 {
-/*
-n[5]={10^1,10^3,10^5,10^6,10^9};
-*/
-start=(clock()/CLOCKS_PER_SEC)*1000;  //czas poczatkowy
-for (int i=0;i<ile;i++); //zwiekszanie tablicy o ilosc elementow podanych od uzytkownika
+
+clock_t start, stop; //zmienne potrzebne do licznei aczasu
+double czas;
+
+
 Tablica tablica;
 int ile;
+
 cout<<"Podaj ile elementow wczytac"<<endl;
 cin>>ile;
+start=clock(); //czas poczatkowy
 tablica.dodajElementy(ile);
+stop=clock(); //czas koncowy
 tablica.zwolnijPamiec();
 
-stop=(clock()/CLOCKS_PER_SEC)*1000; //czas koncowy
-czas= (double)(stop-start); //roznica koncowego czasu od czasu poczatkowego.
-cout<<"Czas zapisu(przy zwiekszaniu o jeden) :"<<czas<<endl;
+czas= (double)(stop-start) /CLOCKS_PER_SEC; //roznica koncowego czasu od czasu poczatkowego.
+cout<<"Czas zwiekszania tablicy: "<<czas<<"[s]"<<endl;
 return 0;
 
 }
