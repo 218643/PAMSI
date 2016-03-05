@@ -1,3 +1,4 @@
+
 #include <cstdlib>
 #include <iostream>
 #include <string>
@@ -8,22 +9,23 @@ using namespace std;
 
 class Tablica {
 private:
-    int *tablica; //tablica
+    int *tablica;
 
 public:
-    int dodajElementy(int n){  //funkcja zwiekszajaca ilosc elementow i wypelniajaca tablice
+    int dodajElementy(int n){
         tablica= new int [n];{
         for (int i=0;i<n;i++);
         tablica[n]=rand();
+
     }
  }
-    void zwolnijPamiec(){ //zwolnienie pamieci
+    void zwolnijPamiec(){
         delete [] tablica;
         }
 
 };
 
-clock_t start, stop; //zmienne potrzebne do licznei aczasu
+clock_t start, stop;
 double czas;
 
 int main()
@@ -31,8 +33,8 @@ int main()
 /*
 n[5]={10^1,10^3,10^5,10^6,10^9};
 */
-start=(clock()/CLOCKS_PER_SEC)*1000;  //czas poczatkowy
-for (int i=0;i<ile;i++); //zwiekszanie tablicy o ilosc elementow podanych od uzytkownika
+start=clock();
+for (int i=0;i<5;i++);
 Tablica tablica;
 int ile;
 cout<<"Podaj ile elementow wczytac"<<endl;
@@ -40,8 +42,8 @@ cin>>ile;
 tablica.dodajElementy(ile);
 tablica.zwolnijPamiec();
 
-stop=(clock()/CLOCKS_PER_SEC)*1000; //czas koncowy
-czas= (double)(stop-start); //roznica koncowego czasu od czasu poczatkowego.
+stop=clock();
+czas= (double)(stop-start);
 cout<<"Czas zapisu(przy zwiekszaniu o jeden) :"<<czas<<endl;
 return 0;
 
