@@ -26,7 +26,7 @@ public:
         tablicapomocnicza[i]=tablica[i];
          }
     licznik2=licznik2+licznik;
-    licznik++
+    licznik++;
     tablicapomocnicza[licznik]=liczba;
 	delete [] tablica;
 	tablica=new int[licznik+1];
