@@ -33,7 +33,6 @@ public:
 
                     }
                     int *NowaTablica = new int[nowyRozmiar]; // tworzy nowa tablice do ktorej wpisuje nowy rozmiar
-                    //delete [] tablica;
                     for(int i = 0; i < nowyRozmiar; i++) //
                     {
                         NowaTablica[i] = liczba;
