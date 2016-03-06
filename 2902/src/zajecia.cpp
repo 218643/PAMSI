@@ -16,26 +16,31 @@ private:
 public:
 //funkcja wypelnia tablice do momentu osiagniecia 10 elementow, nastepnie wykonuje else zwiekszajac jej rozmiar o jeden
 //ponownie wypelnia elementy ifem i znow zwieksza o jeden w else.
-    int dodajElementy(int liczba){  //funkcja zwiekszajaca ilosc miejsc i wypelniajaca tablice
-        if(licznik<10) { //mniejsze od 10 bo tablica ma poczatkowo 10 elmentow
-            tablica[licznik]=0; //wypelnienie nowej tablicy zerami, jesli licznik<10 wstawia zera i zwieksza licznik.
-            licznik++;
-            }
-        else {  //wykonuje else jesli licznik >10. Wtedy przepisuje stary rozmiar tablicy do nowej;
-                //i zwiekszam ja ponownie aby pomiescila wczytywane elemmnty.
-            int *tablicapomocnicza = new int[licznik+1];
-            for (int i=0; i<licznik-1; i++) {
-            tablicapomocnicza[i]=tablica[i];
-            }
-            tablicapomocnicza[licznik]=liczba;
-            delete [] tablica; //zwolnienie pamieci
-            tablica=new int[licznik+1];
-            for (int i=0; i<licznik; i++) {
-            tablica[i]=tablicapomocnicza[i];}
-            licznik++;
-                }
-        }
 
+                  float dodajElementy2(int rozmiar, int liczba)
+            {
+                if(rozmiar<10) //wypełnienie 10 elementow
+                { //licznik zwieksza wartosc dopoki nie dosiegnie okreslonej wartosci, wtedy wykonuje else
+                    for (int i = 0; i < 10; i++)
+                        tablica[licznik]=liczba;
+                }
+                else
+                {
+                    int nowyRozmiar = licznik;
+                    if (nowyRozmiar < rozmiar) //jesli ilsoc miejsc w tablicy jest mniejsza od ilosci elementow to zwieksza o jeden.
+                    {
+                        nowyRozmiar += nowyRozmiar+1;
+
+                    }
+                    int *NowaTablica = new int[nowyRozmiar]; // tworzy nowa tablice do ktorej wpisuje nowy rozmiar
+                    //delete [] tablica;
+                    for(int i = 0; i < nowyRozmiar; i++) //
+                    {
+                        NowaTablica[i] = liczba;
+
+                    }
+                }
+            }
     void zwolnijPamiec(){ //zwolnienie pamieci
         delete [] tablica;
         }
@@ -53,17 +58,17 @@ double czas;
 
 Tablica tablica;
 int ile;
-
 cout<<"Podaj ile elementow wczytac"<<endl;
 cin>>ile;
 start=clock(); //czas poczatkowy
 for(int i=0; i<ile; i++)
-tablica.dodajElementy(0);
+tablica.dodajElementy2(ile,1);
 stop=clock(); //czas koncowy
 tablica.zwolnijPamiec();
 
-czas= (double)(stop-start) /CLOCKS_PER_SEC; //roznica koncowego czasu od czasu poczatkowego w sekundach
+czas= (double)(stop-start)/CLOCKS_PER_SEC; //roznica koncowego czasu od czasu poczatkowego w sekundach
 cout<<"Czas zwiekszania tablicy: "<<czas<<"[s]"<<endl;
 return 0;
 
 }
+
