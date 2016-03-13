@@ -39,9 +39,8 @@ void Biegacz::zwieksz_tablice()
    int* nowa_tablica = new int[rozmiar*2]; //pwoiekszanie razy dwa
    for(int i = 0; i < rozmiar; i++)
      nowa_tablica[i] = tablica[i];
-
-   rozmiar++;
-
+   rozmiar=rozmiar*2;
+//rozmiar++;  //dla zwiekszania o jeden.
    int* tymczasowy_wskaznik = tablica;
    tablica = nowa_tablica;
 
