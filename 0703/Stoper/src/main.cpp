@@ -8,7 +8,8 @@ using namespace std;
 
 int main()
 {
-//Wywolanie funkcji z poszczegolnych klas
+
+//wywołanie funkcji
     Biegacz biegacz;
     Stoper stoper;
     Sedzia sedzia(biegacz, stoper);

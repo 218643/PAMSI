@@ -1,13 +1,9 @@
-#ifndef IRUNNABLE_H
-#define IRUNNABLE_H
-
+#pragma once
 
 class IRunnable
 {
-    public:
-    bool run();
-    int prepare(int size);
-
+public:
+   virtual bool prepare(int size) = 0;
+   virtual bool run() = 0;
 };
 
-#endif // IRUNNABLE_H
