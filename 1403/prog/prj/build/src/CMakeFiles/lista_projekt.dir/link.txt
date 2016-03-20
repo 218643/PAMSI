@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/lista_projekt.dir/Lista.cpp.o CMakeFiles/lista_projekt.dir/Sedzia.cpp.o CMakeFiles/lista_projekt.dir/Stoper.cpp.o CMakeFiles/lista_projekt.dir/Biegacz.cpp.o CMakeFiles/lista_projekt.dir/BiegaczLista.cpp.o CMakeFiles/lista_projekt.dir/main.cpp.o  -o ../lista_projekt -rdynamic 

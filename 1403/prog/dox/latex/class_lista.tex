@@ -1,0 +1,165 @@
+\hypertarget{class_lista}{\section{Lista Class Reference}
+\label{class_lista}\index{Lista@{Lista}}
+}
+
+
+Deklaruje funkcje listy.  
+
+
+
+
+{\ttfamily \#include $<$Lista.\-h$>$}
+
+Inheritance diagram for Lista\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_lista}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_lista_a9e4d70d858b6e3a646f180457b09aa04}{Add} (std\-::string item, int index)
+\item 
+void \hyperlink{class_lista_a6c0bd5efbb3cba185a35bd2aa75beb4d}{Remove} (int index)
+\item 
+bool \hyperlink{class_lista_acceb965602ca6cef206046d40c629395}{Is\-Empty} ()
+\item 
+std\-::string \hyperlink{class_lista_a46ae62bf7552a2350d8680ba95133a4f}{Get} (int index)
+\item 
+int \hyperlink{class_lista_abdcf8dfca8c018469b53c30433f7062c}{Size} ()
+\item 
+\hyperlink{class_lista_a1f668b36909182ef1360b48503529a31}{Lista} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 17 of file Lista.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_lista_a1f668b36909182ef1360b48503529a31}{\index{Lista@{Lista}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista@{Lista}}
+\subsubsection[{Lista}]{\setlength{\rightskip}{0pt plus 5cm}Lista\-::\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_a1f668b36909182ef1360b48503529a31}
+
+
+Definition at line 62 of file Lista.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_lista_a9e4d70d858b6e3a646f180457b09aa04}{\index{Lista@{Lista}!Add@{Add}}
+\index{Add@{Add}!Lista@{Lista}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{item, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_lista_a9e4d70d858b6e3a646f180457b09aa04}
+Funkcja Add dodaje kolejny element listy. Jesli rozmiar listy jest za maly w stosunku do podawanego indexu to wyswietla komunikat. Funkcja dziala w taki sposob, ze tworzy nowy \char`\"{}\-Node\char`\"{} do tablicy, wskaznik z wczesniejszego elementu wskazuje na nowy \hyperlink{struct_node}{Node} nastepnie z \hyperlink{struct_node}{Node} wskazujemy na kolejny element tablicy, aby byla ciaglosc w liscie. W tej funkcji rozpatrujemy 3 przypadki zwieksznaia listy, dostawianie elementu na pocz,koniec lub gdzies pomiedzy w liscie. Jesli dostawiamy na poczatek tworzymy nowy element i wskazujemy na niego wskaznikiem poczatkowym i koncowym. Jesli tworzymy ostatni element, to dodajemy nowego Noda, i wskazujemy na niego wskaznikiem\-K\-O\-Ncowym. Osttanim przypadkiem jest elementu gdzies pomiedzy P\-O\-C\-Z i K\-O\-N listy. Tutaj musimy pamietac ze lista liczy swojem miejsca od 0, wiec w petli for mamy index-\/1. Tworzymy tymczasowy wskaznik i ustawiamy go na pierwszy element. nastepnie w petli przesówamy o tyle elementów ile zadamy-\/1. Przesuwamy ten wskaznik na kolejny element, tworzymy pomocniczy wskaznik ktory ma wskazywac na nowo utworzony element. W nowo utworzonym elemencie dodajemy wskaznik ktory wskazuje na nastepny element ktory byl stworzony przed naszym nowym Nodem.\-Wszystko po to by zachowac ciaglosc listy i wskazywanie na kolejne elementy. dostawiam element na poczatku i wskazuje na wczesniejszy element
+
+aktualizowanie poczatkowoego wskaznika na nowo dodany element
+
+aktualizowanie koncowego+ wskaznika na nowo dodany element
+
+wskaznik koncowy wskazuje na podpiete nowe pole w liscie
+
+temp to tymczasowy wskaznik dodawanej listy
+
+przestawiamy sie na kolejny element
+
+pomocniczy wskaznik
+
+wskazuje na nowo stworzony element
+
+w nowo dodanym elemencie ustawiamy wskaznik na wczesniejszy(ktory jest nastepnym) elementem. 
+
+Implements \hyperlink{class_i_lista_a0d22daaac5830b397eebfc42547ccb71}{I\-Lista}.
+
+
+
+Definition at line 12 of file Lista.\-cpp.
+
+\hypertarget{class_lista_a46ae62bf7552a2350d8680ba95133a4f}{\index{Lista@{Lista}!Get@{Get}}
+\index{Get@{Get}!Lista@{Lista}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Lista\-::\-Get (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_lista_a46ae62bf7552a2350d8680ba95133a4f}
+W tej funkcji tworzymy wskaznik tymczasowy na 1 element listy, przesuwamy o index-\/1 , po znalezieniu interesujacego nas elementu zwracamy jego wartosc. temp to tymczasowy wskaznik dodawanej listy 
+
+Implements \hyperlink{class_i_lista_a2d9a68dc574d9f059e894c0aae44ab87}{I\-Lista}.
+
+
+
+Definition at line 70 of file Lista.\-cpp.
+
+\hypertarget{class_lista_acceb965602ca6cef206046d40c629395}{\index{Lista@{Lista}!Is\-Empty@{Is\-Empty}}
+\index{Is\-Empty@{Is\-Empty}!Lista@{Lista}}
+\subsubsection[{Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Lista\-::\-Is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_lista_acceb965602ca6cef206046d40c629395}
+Zwraca true jesli lista jest pusta lub false jesli nie jest. 
+
+Implements \hyperlink{class_i_lista_ad2d915eac77a5946d73db20c8695cbab}{I\-Lista}.
+
+
+
+Definition at line 8 of file Lista.\-cpp.
+
+\hypertarget{class_lista_a6c0bd5efbb3cba185a35bd2aa75beb4d}{\index{Lista@{Lista}!Remove@{Remove}}
+\index{Remove@{Remove}!Lista@{Lista}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_lista_a6c0bd5efbb3cba185a35bd2aa75beb4d}
+Remove dziala w podobny sposob. Jesli zadamy usuniecie 1 elementu, to zapamietujemy cos na co wskazuje 1 element. Usuwamy to, by nastepnie ustawic wskaznik poczatkowy na cos, na co wskazywal pierwszy element. Jesli usuwamy ostatni element to tworzymy wskaznik tymczasowy na pierwszy element, przesuwamy do ostatniego, gdzie index zmniejszamy -\/2, poniewaz indexujemy liste od zera, oraz interesuje nas wczesniejszy element ktory wskazuje na ostatni. Gdy osiegniey przedostatni element wskazujemy jego wskaznikiem na null pointer oraz usuwamy wczesniejszy osttni element z listy na ktorego nic nie wskazuje. W ostatnim przypadku tworzymy tymczasowy nastepnik , ktory jest wskaznikiem na wskaznik. Przesukujemy liste od poczatku, usuwamy element i nasz wskaznik dalej wskazuje na kolejny element dzieki nastepnikowi. Zachowana jest ciaglosc wskazywania na siebie elementow z listy. zapamietaj drugi element listy
+
+usun pierwszy element
+
+przestaw drugi na pierwszy
+
+temp to tymczasowy wskaznik dodawanej listy
+
+przestawiamy sie na kolejny element
+
+temp to tymczasowy wskaznik dodawanej listy 
+
+Implements \hyperlink{class_i_lista_ae2176d09c56106bcff4371785c11ee6f}{I\-Lista}.
+
+
+
+Definition at line 43 of file Lista.\-cpp.
+
+\hypertarget{class_lista_abdcf8dfca8c018469b53c30433f7062c}{\index{Lista@{Lista}!Size@{Size}}
+\index{Size@{Size}!Lista@{Lista}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}int Lista\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_lista_abdcf8dfca8c018469b53c30433f7062c}
+Size zwraca nam zmienna rozmiar. 
+
+Implements \hyperlink{class_i_lista_a7063d86e7bc765b929ff9d0e0eefa2d1}{I\-Lista}.
+
+
+
+Definition at line 3 of file Lista.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/inc/\hyperlink{_lista_8h}{Lista.\-h}\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/src/\hyperlink{_lista_8cpp}{Lista.\-cpp}\end{DoxyCompactItemize}

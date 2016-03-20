@@ -1,0 +1,10 @@
+Kompilacja:
+Aby skompilować program, należy wejść przez terminal do pliku prog/prj. Następnie w terminalu wpisać:
+mkdir build
+cd build
+cmake ..
+make
+
+Aby uruchomić program należy wpisać w terminalu: ./lista_projekt. 
+Dane odnośnie rozmiaru listy znajdują się w folderze: prog/prj/build//dystans.txt
+

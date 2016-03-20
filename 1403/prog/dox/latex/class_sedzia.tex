@@ -1,0 +1,61 @@
+\hypertarget{class_sedzia}{\section{Sedzia Class Reference}
+\label{class_sedzia}\index{Sedzia@{Sedzia}}
+}
+
+
+Jest to klasa nadrzedna , ktora struje klasami \hyperlink{class_stoper}{Stoper} i \hyperlink{class_biegacz}{Biegacz} poprzez odwolanie sie do interfejsow.  
+
+
+
+
+{\ttfamily \#include $<$Sedzia.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sedzia_ae4d4ad29d07d9e0b8336fc64a56ee4ee}{Sedzia} (\hyperlink{class_i_runnable}{I\-Runnable} \&biegacz, \hyperlink{class_i_stoper}{I\-Stoper} \&stoper)
+\item 
+void \hyperlink{class_sedzia_a21336aaef6c5e2476605468aee086079}{release} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 16 of file Sedzia.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sedzia_ae4d4ad29d07d9e0b8336fc64a56ee4ee}{\index{Sedzia@{Sedzia}!Sedzia@{Sedzia}}
+\index{Sedzia@{Sedzia}!Sedzia@{Sedzia}}
+\subsubsection[{Sedzia}]{\setlength{\rightskip}{0pt plus 5cm}Sedzia\-::\-Sedzia (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Runnable} \&}]{biegacz, }
+\item[{{\bf I\-Stoper} \&}]{stoper}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_sedzia_ae4d4ad29d07d9e0b8336fc64a56ee4ee}
+
+
+Definition at line 21 of file Sedzia.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sedzia_a21336aaef6c5e2476605468aee086079}{\index{Sedzia@{Sedzia}!release@{release}}
+\index{release@{release}!Sedzia@{Sedzia}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void Sedzia\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_sedzia_a21336aaef6c5e2476605468aee086079}
+Przez funkcje release wywolujemy kolejno funkcje biegacz prepare-\/$>$Start-\/$>$run-\/$>$Stop-\/$>$get\-Elapsed\-Time-\/$>$dump\-To\-File ktore sa zdefiniowane w klasach \hyperlink{class_stoper}{Stoper} i \hyperlink{class_biegacz}{Biegacz}. Mamy taka mozliwosc poprzez interfejsy. 
+
+Definition at line 3 of file Sedzia.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/inc/\hyperlink{_sedzia_8h}{Sedzia.\-h}\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/src/\hyperlink{_sedzia_8cpp}{Sedzia.\-cpp}\end{DoxyCompactItemize}

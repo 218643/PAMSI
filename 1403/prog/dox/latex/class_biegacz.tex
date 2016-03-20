@@ -1,0 +1,97 @@
+\hypertarget{class_biegacz}{\section{Biegacz Class Reference}
+\label{class_biegacz}\index{Biegacz@{Biegacz}}
+}
+
+
+{\ttfamily \#include $<$Biegacz.\-h$>$}
+
+Inheritance diagram for Biegacz\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_biegacz}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_biegacz_a9d96f7a62f68dc82082242f1171d0c3e}{Biegacz} ()
+\item 
+virtual \hyperlink{class_biegacz_a76507051a4060a27bdf2867f391fd85b}{$\sim$\-Biegacz} ()
+\item 
+bool \hyperlink{class_biegacz_a1967974c503d96a81b24f301ca57ee66}{prepare} (int size)
+\begin{DoxyCompactList}\small\item\em przygotowanie biegacza, czyli oczyszczenie z tablicy wynikow po wczesniejszym biegu i przygotowanie nowego dystansu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_biegacz_a235f4fa4a295a2958b8d8f05f276515b}{run} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file Biegacz.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_biegacz_a9d96f7a62f68dc82082242f1171d0c3e}{\index{Biegacz@{Biegacz}!Biegacz@{Biegacz}}
+\index{Biegacz@{Biegacz}!Biegacz@{Biegacz}}
+\subsubsection[{Biegacz}]{\setlength{\rightskip}{0pt plus 5cm}Biegacz\-::\-Biegacz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_biegacz_a9d96f7a62f68dc82082242f1171d0c3e}
+stworzenie tablicy do powiekszenia 
+
+Definition at line 3 of file Biegacz.\-cpp.
+
+\hypertarget{class_biegacz_a76507051a4060a27bdf2867f391fd85b}{\index{Biegacz@{Biegacz}!$\sim$\-Biegacz@{$\sim$\-Biegacz}}
+\index{$\sim$\-Biegacz@{$\sim$\-Biegacz}!Biegacz@{Biegacz}}
+\subsubsection[{$\sim$\-Biegacz}]{\setlength{\rightskip}{0pt plus 5cm}Biegacz\-::$\sim$\-Biegacz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_biegacz_a76507051a4060a27bdf2867f391fd85b}
+
+
+Definition at line 10 of file Biegacz.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_biegacz_a1967974c503d96a81b24f301ca57ee66}{\index{Biegacz@{Biegacz}!prepare@{prepare}}
+\index{prepare@{prepare}!Biegacz@{Biegacz}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}bool Biegacz\-::prepare (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_biegacz_a1967974c503d96a81b24f301ca57ee66}
+Sprzatam po poprzednim \char`\"{}biegu\char`\"{}, ustawiam wartosci poczatkowe
+
+oczekiwana wart\-: 10,10$^\wedge$3,10$^\wedge$5... 
+
+Implements \hyperlink{class_i_runnable_ab4916d02d90d684028529fabbf76224b}{I\-Runnable}.
+
+
+
+Definition at line 50 of file Biegacz.\-cpp.
+
+\hypertarget{class_biegacz_a235f4fa4a295a2958b8d8f05f276515b}{\index{Biegacz@{Biegacz}!run@{run}}
+\index{run@{run}!Biegacz@{Biegacz}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}bool Biegacz\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_biegacz_a235f4fa4a295a2958b8d8f05f276515b}
+uzupelnianie tablicy zerami. 
+
+Implements \hyperlink{class_i_runnable_ae022a87afe9509ad08d21cda36a4e357}{I\-Runnable}.
+
+
+
+Definition at line 61 of file Biegacz.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/inc/\hyperlink{_biegacz_8h}{Biegacz.\-h}\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/src/\hyperlink{_biegacz_8cpp}{Biegacz.\-cpp}\end{DoxyCompactItemize}

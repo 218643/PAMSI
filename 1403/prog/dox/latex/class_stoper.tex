@@ -1,0 +1,138 @@
+\hypertarget{class_stoper}{\section{Stoper Class Reference}
+\label{class_stoper}\index{Stoper@{Stoper}}
+}
+
+
+zastepuje kilkukrotne wklejanie pliku naglowkowego  
+
+
+
+
+{\ttfamily \#include $<$Stoper.\-h$>$}
+
+Inheritance diagram for Stoper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stoper}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{class_stoper_ac7b1a0995c65c28a71e3ceabf5c6f965}{clock} = std\-::chrono\-::high\-\_\-resolution\-\_\-clock
+\begin{DoxyCompactList}\small\item\em const\& =unikamy kopi \end{DoxyCompactList}\item 
+using \hyperlink{class_stoper_a7d5d891cde8e9882bea254614a0fd2dd}{time\-\_\-point} = clock\-::time\-\_\-point
+\begin{DoxyCompactList}\small\item\em czas systemowy \end{DoxyCompactList}\item 
+using \hyperlink{class_stoper_a249c00c1592a239a8463880dcd657dd3}{time\-\_\-type} = std\-::chrono\-::milliseconds
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_stoper_a5cfc1f0da41e5ca2728e2d80b8da72b9}{Start} ()
+\item 
+void \hyperlink{class_stoper_a0890e704c10c35d858490eb68b04df7e}{Stop} ()
+\item 
+double \hyperlink{class_stoper_a8f50bbba9cb719ca9d573a5cb4a19e36}{get\-Elapsed\-Time} ()
+\begin{DoxyCompactList}\small\item\em duration cast=operator porownujacy, pozwala odjac 2 punkty w czasie \end{DoxyCompactList}\item 
+void \hyperlink{class_stoper_a4a5dd13c26112cb43b11203fe9f7d4a7}{dump\-To\-File} (std\-::string const \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Mierzy czas,wyswitla czas okrazenia, zwraca wyniki do pliku. 
+
+Definition at line 13 of file Stoper.\-h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_stoper_ac7b1a0995c65c28a71e3ceabf5c6f965}{\index{Stoper@{Stoper}!clock@{clock}}
+\index{clock@{clock}!Stoper@{Stoper}}
+\subsubsection[{clock}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf Stoper\-::clock} =  std\-::chrono\-::high\-\_\-resolution\-\_\-clock}}\label{class_stoper_ac7b1a0995c65c28a71e3ceabf5c6f965}
+
+
+Definition at line 34 of file Stoper.\-h.
+
+\hypertarget{class_stoper_a7d5d891cde8e9882bea254614a0fd2dd}{\index{Stoper@{Stoper}!time\-\_\-point@{time\-\_\-point}}
+\index{time\-\_\-point@{time\-\_\-point}!Stoper@{Stoper}}
+\subsubsection[{time\-\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf Stoper\-::time\-\_\-point} =  clock\-::time\-\_\-point}}\label{class_stoper_a7d5d891cde8e9882bea254614a0fd2dd}
+
+
+Definition at line 35 of file Stoper.\-h.
+
+\hypertarget{class_stoper_a249c00c1592a239a8463880dcd657dd3}{\index{Stoper@{Stoper}!time\-\_\-type@{time\-\_\-type}}
+\index{time\-\_\-type@{time\-\_\-type}!Stoper@{Stoper}}
+\subsubsection[{time\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf Stoper\-::time\-\_\-type} =  std\-::chrono\-::milliseconds}}\label{class_stoper_a249c00c1592a239a8463880dcd657dd3}
+
+
+Definition at line 36 of file Stoper.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_stoper_a4a5dd13c26112cb43b11203fe9f7d4a7}{\index{Stoper@{Stoper}!dump\-To\-File@{dump\-To\-File}}
+\index{dump\-To\-File@{dump\-To\-File}!Stoper@{Stoper}}
+\subsubsection[{dump\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Stoper\-::dump\-To\-File (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{nazwa\-Pliku}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_stoper_a4a5dd13c26112cb43b11203fe9f7d4a7}
+dump\-To\-File wysyla wyniki do pliku tekstowego. Jesli go nie am to go tworzy. Wyniki wysylane sa w kolejnosci wykonania petli. 
+
+Implements \hyperlink{class_i_stoper_a7b0d30f85063cc2171197d93d8a0de5d}{I\-Stoper}.
+
+
+
+Definition at line 19 of file Stoper.\-cpp.
+
+\hypertarget{class_stoper_a8f50bbba9cb719ca9d573a5cb4a19e36}{\index{Stoper@{Stoper}!get\-Elapsed\-Time@{get\-Elapsed\-Time}}
+\index{get\-Elapsed\-Time@{get\-Elapsed\-Time}!Stoper@{Stoper}}
+\subsubsection[{get\-Elapsed\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double Stoper\-::get\-Elapsed\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_stoper_a8f50bbba9cb719ca9d573a5cb4a19e36}
+get\-Elapsed\-Time wykonuje roznice (Stop-\/\-Start) i zwraca czas w milisekundach 
+
+Implements \hyperlink{class_i_stoper_abf0cb1128747e1a482ed487af6e6d114}{I\-Stoper}.
+
+
+
+Definition at line 13 of file Stoper.\-cpp.
+
+\hypertarget{class_stoper_a5cfc1f0da41e5ca2728e2d80b8da72b9}{\index{Stoper@{Stoper}!Start@{Start}}
+\index{Start@{Start}!Stoper@{Stoper}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Stoper\-::\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_stoper_a5cfc1f0da41e5ca2728e2d80b8da72b9}
+Start pobiera czas systemowy przed wykonaniem zadania 
+
+Implements \hyperlink{class_i_stoper_af250c507e0525d290751e0d8e8b3f4b4}{I\-Stoper}.
+
+
+
+Definition at line 3 of file Stoper.\-cpp.
+
+\hypertarget{class_stoper_a0890e704c10c35d858490eb68b04df7e}{\index{Stoper@{Stoper}!Stop@{Stop}}
+\index{Stop@{Stop}!Stoper@{Stoper}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Stoper\-::\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_stoper_a0890e704c10c35d858490eb68b04df7e}
+Stop pobiera czas systemowy po wykonaniu zadania 
+
+Implements \hyperlink{class_i_stoper_a185e9c07e0376eb2075f4549ef166243}{I\-Stoper}.
+
+
+
+Definition at line 8 of file Stoper.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/inc/\hyperlink{_stoper_8h}{Stoper.\-h}\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/src/\hyperlink{_stoper_8cpp}{Stoper.\-cpp}\end{DoxyCompactItemize}

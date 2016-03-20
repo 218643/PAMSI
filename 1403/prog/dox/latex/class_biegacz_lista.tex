@@ -1,0 +1,75 @@
+\hypertarget{class_biegacz_lista}{\section{Biegacz\-Lista Class Reference}
+\label{class_biegacz_lista}\index{Biegacz\-Lista@{Biegacz\-Lista}}
+}
+
+
+Przygotowuje liste i definiuje przebieg jej uzupelniania.  
+
+
+
+
+{\ttfamily \#include $<$Biegacz\-Lista.\-h$>$}
+
+Inheritance diagram for Biegacz\-Lista\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_biegacz_lista}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_biegacz_lista_a52e49f11f47e35cb0cda910c4ab8f706}{prepare} (int rozmiar\-\_\-docelowy)
+\item 
+bool \hyperlink{class_biegacz_lista_a6bc929cc4a575a7ef3415e9e8d728f3d}{run} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file Biegacz\-Lista.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_biegacz_lista_a52e49f11f47e35cb0cda910c4ab8f706}{\index{Biegacz\-Lista@{Biegacz\-Lista}!prepare@{prepare}}
+\index{prepare@{prepare}!BiegaczLista@{Biegacz\-Lista}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}bool Biegacz\-Lista\-::prepare (
+\begin{DoxyParamCaption}
+\item[{int}]{rozmiar\-\_\-docelowy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_biegacz_lista_a52e49f11f47e35cb0cda910c4ab8f706}
+Klasa pomocnicza majaca na celu zdefiniowanie metod z tablicowego Biegacza, dla listy. Usuwa wczesniej modyfikowana liste. Funkcja prepare zwieksza rozmiar listy do rozmiaru docelowego, wypelnia ja losowymi slowami, oraz jednym slowem ktorego bedziemy szukac. sprztanie po poprzedniej liscie.
+
+wypelnienie listy losowymi slowami/elementami(stale)
+
+wrzucanie wyrazu na losowe miejsce w liscie 
+
+Implements \hyperlink{class_i_runnable_ab4916d02d90d684028529fabbf76224b}{I\-Runnable}.
+
+
+
+Definition at line 3 of file Biegacz\-Lista.\-cpp.
+
+\hypertarget{class_biegacz_lista_a6bc929cc4a575a7ef3415e9e8d728f3d}{\index{Biegacz\-Lista@{Biegacz\-Lista}!run@{run}}
+\index{run@{run}!BiegaczLista@{Biegacz\-Lista}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}bool Biegacz\-Lista\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_biegacz_lista_a6bc929cc4a575a7ef3415e9e8d728f3d}
+Funkcja run wyszukuje slowo i zwraca prawde lub falsz w zaleznosci ,czy znalazlo czy nie. przeszukuje liste by znalezc slowo podane nizej. 
+
+Implements \hyperlink{class_i_runnable_ae022a87afe9509ad08d21cda36a4e357}{I\-Runnable}.
+
+
+
+Definition at line 21 of file Biegacz\-Lista.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/inc/\hyperlink{_biegacz_lista_8h}{Biegacz\-Lista.\-h}\item 
+/home/patr95/\-Pulpit/\-P\-A\-M\-S\-I/1403/prog/prj/src/\hyperlink{_biegacz_lista_8cpp}{Biegacz\-Lista.\-cpp}\end{DoxyCompactItemize}
