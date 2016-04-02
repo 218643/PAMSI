@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <time.h>
+#include <sys/time.h>
 
 using namespace std;
 
@@ -47,27 +47,19 @@ nastepnie ponownie w ifie wypelnia do 20 uzupelniajac elmentami i ponownie w els
 };
 
 
-
 int main()
 {
-
-clock_t start, stop; //zmienne potrzebne do licznei aczasu
-double czas;
-
-
 Tablica tablica;
-int ile;
-
+int ile, i;
+struct timeval *tim;
 cout<<"Podaj ile elementow wczytac"<<endl;
 cin>>ile;
-start=clock(); //czas poczatkowy
+    gettimeofday(tim, NULL);
+    double t1=tim->tv_sec+(tim->tv_usec/1000000.0);
 for(int i=0; i<ile; i++)
 tablica.dodajElementy(ile,0);
-stop=clock(); //czas koncowy
-tablica.zwolnijPamiec();
-
-czas= (double)(stop-start) /CLOCKS_PER_SEC; //roznica koncowego czasu od czasu poczatkowego w sekundach
-cout<<"Czas zwiekszania tablicy: "<<czas<<"[s]"<<endl;
-return 0;
-
-}
+    gettimeofday(tim, NULL);
+    double t2=tim->tv_sec+(tim->tv_usec/1000000.0);
+cout << "Czas powiekszenia tablicy wynosi:"<<("%.6lf seconds elapsed\n", t2-t1)<<endl;
+ return 0;
+ }
