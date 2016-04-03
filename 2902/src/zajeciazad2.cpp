@@ -61,5 +61,6 @@ tablica.dodajElementy(ile,0);
     gettimeofday(tim, NULL);
     double t2=tim->tv_sec+(tim->tv_usec/1000000.0);
 cout << "Czas powiekszenia tablicy wynosi:"<<("%.6lf seconds elapsed\n", t2-t1)<<endl;
+tablica.zwolnijPamiec();
  return 0;
  }
