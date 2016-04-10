@@ -16,3 +16,9 @@ Brak wniosków ("Kod kompiluje się , program wykonuje poprawnie swoje funkcje, 
 czasy mieszczące się w przypuszczalnym zakresie.")
 
 # Lab4 - ADT, lista / kolejka / stos
+
+Brak sprawozdania
+
+Ocena: 2.0
+
+# Lab5 - sortowanie
