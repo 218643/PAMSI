@@ -1,0 +1,12 @@
+Aby skompilować program:
+1.Wejdz w katalog 1104
+2.Wywołaj mkdir build
+3.cd build
+4. cmake ..
+5. make
+
+Aby uruchomić:
+./hash_tab
+
+
+Plik kontakty.txt musi się znajdować w katalogu build.
