@@ -17,8 +17,24 @@ czasy mieszczące się w przypuszczalnym zakresie.")
 
 # Lab4 - ADT, lista / kolejka / stos
 
-Brak sprawozdania
+Sprawozdanie uzupełnione, wyniki zgodne z teorią.
 
-Ocena: 2.0
+Ocena: 4,5
 
 # Lab5 - sortowanie
+
+# Lab6 - tablica asocjacyjna
+
+Sprawozdanie nie jest napisane językiem technicznym.
+Tabela z wynikami jest całkowicie bezużyteczna, można z niej zrozumieć zarówno,
+że dla rozmiaru tablicy 1000 uzupełnienie tablicy trwało 1 rok, jak i że szukanie
+słowa dla rozmiaru tablicy 100000 zwróciło 31 wyników.
+
+Tezy dotyczące złożoności obliczeniowej, zawarte w sekcji "Wnioski" nie są niczym
+potwierdzone, chyba że jest to przytoczona teoria, wtedy brak odniesienia do
+wyników przeprowadzonych eksperymentów.
+
+Podsumowując - sprawozdanie jest wykonane fatalnie i nie stanowi podstawy do
+zaliczenia zadania.
+
+Ocena: 2
