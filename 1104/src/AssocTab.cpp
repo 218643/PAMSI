@@ -1,53 +1,29 @@
-#pragma once
-#include <string>
-#include <iostream>
+#include "AssocTab.h"
 
-#include "IAssocTab.hh"
+int AssocTab::hash(std::string const& stringToHash)
+{
+  std::locale locale; // potrzebne konwersji na duze litery
+  auto pierwszaLiteraZamienionaNaDuza = std::toupper(stringToHash[0],locale);
+  int ascii = int(pierwszaLiteraZamienionaNaDuza);
+  return ascii - 65;
+}
 
+NumerZWlascicielem AssocTab::direct_search(std::string wlasciciel)
+{
+  int indexListy = hash(wlasciciel);
+  // zrobic hash z wlasciciela
+  for(int i = 0; i < tab[indexListy].Size() + 1; i++)
+  {
+    // jezeli znajdziesz klucz, zwroc telefon z wlascicielem
+    if(tab[indexListy].Get(i).wlasciciel == wlasciciel)
+      return tab[indexListy].Get(i);
+  }
+  // jezeli nie znajdzie
+  return NumerZWlascicielem("Nie znaleziono!",0);
+}
 
-using namespace std;
-
-
-///tutaj mamy od razu rozmiar naszej tablicy
-   void ArrayTab (int *tablica, int n)
-    {
-        boost::array < int, 4 > tablica = { 1, 2, 3 };
-        for( n_t i = 0; i < tablica.n(); ++i )
-
-        return 0;
-    }
-
-    int & AssocTab::operator[] (const char *key)
-    {
-        node *c = find (key);
-
-        if (!c)
-        {
-                insert (key, 0);
-                c = head;
-        };
-
-        return c->val;
-    }
-
-
-   void direct_search(int k)
-     {
-       return array[k];
-     }
-
-
-
-
-    void direct_insert(int x, int k)
-     {
-        array[k] = x;
-     }
-
-
-
-    void key(string k, int v)//funckja klucza.
-      {
-
-
-      }
+void AssocTab::direct_insert(NumerZWlascicielem element)
+{
+  int index = hash(element.wlasciciel);
+  tab[index].Add(element,tab[index].Size());
+}

@@ -1,18 +1,16 @@
 #pragma once
-#include <string>
-#include <iostream>
 
-#include "IAssocTab.h"
-#include "IHashTab.h"
+#include "Lista.h"
+#include "NumerZWlascicielem.h"
 
-class AssocTab : public IAssocTab
+class AssocTab
 {
-    int &operator [] (const char *);
-    void ArrayTab (int *tablica, int n); ///inicjalizacja tablicy o rozmiarze zdefiniowanym w metodzie.
-    void direct_search(int k); ///wyszukiwanie elementu o kluczu k.
-    void direct_insert(int x, int k); ///dopisywanie elementu d o kluczu k
-    void key(string k, int v); ///klucz
-
-
-
+ public:
+  AssocTab(int n) :rozmiar(n) {} ///inicjalizacja tablicy o rozmiarze zdefiniowanym w metodzie. ( : mowi ze rozmiar zainicjalizuje n)
+  NumerZWlascicielem direct_search(std::string wlasciciel); ///wyszukiwanie elementu o kluczu k.
+  void direct_insert(NumerZWlascicielem element); ///dopisywanie elementu d o kluczu k
+ private:
+  int rozmiar;
+  Lista<NumerZWlascicielem> tab[32];
+  int hash(std::string const& stringToHash);
 };
