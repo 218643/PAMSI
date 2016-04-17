@@ -1,12 +1,14 @@
 Aby skompilować program:
-1.Wejdz w katalog 1104
-2.Wywołaj mkdir build
-3.cd build
+1. Wejdz w katalog 1104
+2. Wywołaj mkdir build
+3. cd build
 4. cmake ..
 5. make
 
 Aby uruchomić:
-./hash_tab
+./hash_tab (nalezy pamiętać, aby uprzednio umieścić plik kontakty.txt w tym folderze).
 
 
-Plik kontakty.txt musi się znajdować w katalogu build.
+W folderze 'kontakty' znajduja sie słowa z numerami umieszczone w plikach txt. Nazwa pliku mówi o ilości słów, tzn 10k=10000 itd.
+Pliki te należy umieścić w folderze "build" po jego utworzeniu.
+Szukane słowo znajduję się w pliku main.cpp, w 24linijce. Można je tam swobodnie zmieniać.
