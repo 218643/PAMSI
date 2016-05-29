@@ -37,4 +37,20 @@ wyników przeprowadzonych eksperymentów.
 Podsumowując - sprawozdanie jest wykonane fatalnie i nie stanowi podstawy do
 zaliczenia zadania.
 
+Po uwzględnieniu uwag - sprawozdanie poprawione - Ocena: 4,5
+
+# Lab7- drzewa
+
+Wykresy w sprawozdaniu nie przedstawiają log(n), wnioski wymagają weryfikacji
+
+# Lab8 - grafy (dfs,bfs)
+
+Podobnie jak w poprzednim zadaniu - wykresy nie przekonują o tym, co jest napisane
+we wnioskach. Być może analizowane grafy są zbyt mało zróżnicowane (to dodatkowo
+  sugeruje dość znaczna rozbieżność w wynikach DFS i BFS).
+
+# Lab9 - grafy (b&b)
+
+brak sprawozdania, kod niedokonczony
+
 Ocena: 2
