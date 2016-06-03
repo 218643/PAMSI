@@ -1,13 +1,14 @@
 #include <iostream>
 #include "graphsearch.hh"
 #include "stoper.hh"
+
 #include <cstdlib>
 
 using namespace std;
 
 int main()
 {
-  int X=1000;
+  int X=100000;
   Stoper pomiar;
   graphSearch *graf=new graphSearch;
 
@@ -26,12 +27,10 @@ int main()
   pomiar.Start();
   graf->findPathBFS(0,rand()%X);
   pomiar.Stop();
-  cout<<"BFS :"<< pomiar.getElapsedTime() <<endl;
-
-
+  cout<<"BFS CZAS :"<< pomiar.getElapsedTime() <<endl;
   pomiar.Start();
   graf->findPathDFS(0,rand()%X);
   pomiar.Stop();
-  cout<<"DFS :"<<pomiar.getElapsedTime() <<endl;
+  cout<<"DFS CZAS :"<<  pomiar.getElapsedTime()<<endl;
 
 }

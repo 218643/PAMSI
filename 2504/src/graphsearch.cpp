@@ -1,6 +1,7 @@
 #include "graphsearch.hh"
 #include <iostream>
 
+#define ELEMENTY 1000001
 
 bool graphSearch::DFS(int x)
 {
@@ -40,7 +41,7 @@ void graphSearch::BFS(int x)
 void graphSearch::findPathDFS(int x, int y)
 {
   vk=y;
-  for(int i=0;i<1000001;i++)
+  for(int i=0;i<ELEMENTY;i++)
     visited[i]=0;
 
   if(!DFS(x))
@@ -57,8 +58,8 @@ void graphSearch::findPathBFS(int x, int y)
 {
   bool found;
   int v,u;
-  int* P=new int[1000001];
-  for(int i=0;i<1000001;i++)
+  int* P=new int[ELEMENTY];
+  for(int i=0;i<ELEMENTY;i++)
     visited[i]=0;
 
   P[x]=-1;

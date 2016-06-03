@@ -4,8 +4,6 @@
 using namespace std;
 List::List()
 {
-  //poczatek->nastepny=0;
-  //koniec=0;
   Size=0;
 }
 int List::add(int element, int position)
