@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-  const int sup=100000;// liczba elementow
+  const int sup=10000;// liczba elementow
   tree *drzewko;
   Stoper s;
   drzewko=new tree;
@@ -22,7 +22,9 @@ int main()
   s.Stop();
   std::cout <<"Czas budowania drzewa:"<< s.getElapsedTime() <<" ms"<< std::endl;
   s.Start();
-  drzewko->find(e1.key);
+  int A=100; //ilosc przeszukan
+  for ( int i=0; i<A; i++){
+  drzewko->find(-1);}
   s.Stop();
 std::cout <<"Czas wyszukania:"<< s.getElapsedTime() <<" ms"<< std::endl;
 }

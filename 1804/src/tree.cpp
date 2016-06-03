@@ -179,3 +179,4 @@ void tree::rightRotate(node *A)
 	root=B;
     }
 }
+/*
